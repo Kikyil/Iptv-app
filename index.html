@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Premium IPTV</title>
+<link rel="stylesheet" href="css/app.css" />
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+  <div class="brand">Premium IPTV</div>
+  <button id="modeBtn" class="pill">Saver 360p</button>
+  <input id="search" placeholder="Search channels..." />
+</header>
+
+<nav class="nav">
+<button class="navtab active" data-view="home">⌂ Home</button>
+<button class="navtab" data-view="categories">🎛 Cats</button>
+<button class="navtab" data-view="countries">🌍 Cntry</button>
+<button class="navtab" data-view="languages">文 Lang</button>
+<button class="navtab" data-view="favorites">♡ Fav</button>
+</nav>
+
+<main id="homeView">
+<section id="hero"></section>
+<section id="content"></section>
+</main>
+
+<section id="playerView" class="hidden">
+<header class="playerbar">
+<button id="backBtn">← Back</button>
+<div class="playerActions">
+<button id="qualityBtn">Quality</button>
+<button id="fullBtn">Full</button>
+<button id="channelsBtn">Channels</button>
+</div>
+</header>
+<div class="playerWrap">
+<div id="loading">Connecting...</div>
+<video id="video" controls playsinline></video>
+</div>
+<div id="epgBox">
+<div id="epgNow"></div>
+<div id="epgNext"></div>
+</div>
+</section>
+
+<aside id="browserPanel" class="panel hidden">
+<div class="panelHead">
+<h3 id="panelTitle"></h3>
+<button id="closePanel">✕</button>
+</div>
+<div id="panelContent"></div>
+</aside>
+
+<aside id="drawer" class="panel hidden">
+<div class="panelHead">
+<h3>Channels</h3>
+<button id="closeDrawer">✕</button>
+</div>
+<div id="drawerContent"></div>
+</aside>
+
+<aside id="qualityPanel" class="panel hidden">
+<div class="panelHead">
+<h3>Quality</h3>
+<button id="closeQuality">✕</button>
+</div>
+<div id="qualityOptions"></div>
+</aside>
+
+<footer class="footer">
+<a href="#">About</a>
+<a href="#">Privacy</a>
+<a href="#">Terms</a>
+<a href="#">Contact</a>
+</footer>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
